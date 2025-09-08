@@ -1,0 +1,77 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"certifications": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "ride",
+									"type": "Text"
+								}
+							],
+							[
+								"organization",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "bicycle",
+									"type": "Text"
+								}
+							],
+							[
+								"year",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "bee",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"education_and_training": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "star",
+									"type": "Text"
+								}
+							],
+							[
+								"location",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "social",
+									"type": "Text"
+								}
+							],
+							[
+								"year",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "enemy",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

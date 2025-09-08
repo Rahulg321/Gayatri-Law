@@ -1,6 +1,9 @@
 {
   "format": "page",
   "id": "page",
+  "label": "Page",
+  "repeatable": true,
+  "status": true,
   "json": {
     "Main": {
       "uid": {
@@ -10,11 +13,33 @@
         }
       },
       "slices": {
-        "config": {
-          "choices": {}
-        },
+        "type": "Slices",
         "fieldset": "Slice Zone",
-        "type": "Slices"
+        "config": {
+          "choices": {
+            "certified_education": {
+              "type": "SharedSlice"
+            },
+            "cta": {
+              "type": "SharedSlice"
+            },
+            "detailed_experience": {
+              "type": "SharedSlice"
+            },
+            "career_overview": {
+              "type": "SharedSlice"
+            },
+            "hero_slice": {
+              "type": "SharedSlice"
+            },
+            "experience_index": {
+              "type": "SharedSlice"
+            },
+            "experience_hero": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     },
     "SEO & Metadata": {
@@ -44,8 +69,5 @@
         "type": "Image"
       }
     }
-  },
-  "label": "Page",
-  "repeatable": true,
-  "status": true
+  }
 }

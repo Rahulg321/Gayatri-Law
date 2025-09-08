@@ -69,7 +69,294 @@ type ContentRelationshipFieldWithData<
   >;
 }[Exclude<TCustomType[number], string>["id"]];
 
-type HomepageDocumentDataSlicesSlice = HeroSliceSlice;
+/**
+ * Item in *Experience → Expertise*
+ */
+export interface ExperienceDocumentDataExpertiseItem {
+  /**
+   * Name field in *Experience → Expertise*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.expertise[].name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  name: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Experience → Key Responsibilities*
+ */
+export interface ExperienceDocumentDataKeyResponsibilitiesItem {
+  /**
+   * Title field in *Experience → Key Responsibilities*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.key_responsibilities[].title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Experience → Achievements*
+ */
+export interface ExperienceDocumentDataAchievementsItem {
+  /**
+   * Name field in *Experience → Achievements*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.achievements[].name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  name: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Experience → Skills*
+ */
+export interface ExperienceDocumentDataSkillsItem {
+  /**
+   * Skill Name field in *Experience → Skills*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.skills[].skill_name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  skill_name: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Experience → Technologies*
+ */
+export interface ExperienceDocumentDataTechnologiesItem {
+  /**
+   * Name field in *Experience → Technologies*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.technologies[].name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  name: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Experience → Case Types Practice Areas*
+ */
+export interface ExperienceDocumentDataCaseTypesPracticeAreasItem {
+  /**
+   * Name field in *Experience → Case Types Practice Areas*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.case_types_practice_areas[].name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  name: prismic.KeyTextField;
+}
+
+type ExperienceDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Experience documents
+ */
+interface ExperienceDocumentData {
+  /**
+   * Name field in *Experience*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Year field in *Experience*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.year
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  year: prismic.KeyTextField;
+
+  /**
+   * Company field in *Experience*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.company
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  company: prismic.KeyTextField;
+
+  /**
+   * Description field in *Experience*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * Expertise field in *Experience*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.expertise[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  expertise: prismic.GroupField<Simplify<ExperienceDocumentDataExpertiseItem>>;
+
+  /**
+   * Key Responsibilities field in *Experience*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.key_responsibilities[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  key_responsibilities: prismic.GroupField<
+    Simplify<ExperienceDocumentDataKeyResponsibilitiesItem>
+  >;
+
+  /**
+   * Achievements field in *Experience*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.achievements[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  achievements: prismic.GroupField<
+    Simplify<ExperienceDocumentDataAchievementsItem>
+  >;
+
+  /**
+   * Skills field in *Experience*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.skills[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  skills: prismic.GroupField<Simplify<ExperienceDocumentDataSkillsItem>>;
+
+  /**
+   * Technologies field in *Experience*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.technologies[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  technologies: prismic.GroupField<
+    Simplify<ExperienceDocumentDataTechnologiesItem>
+  >;
+
+  /**
+   * Case Types Practice Areas field in *Experience*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.case_types_practice_areas[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  case_types_practice_areas: prismic.GroupField<
+    Simplify<ExperienceDocumentDataCaseTypesPracticeAreasItem>
+  >;
+
+  /**
+   * Location field in *Experience*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.location
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  location: prismic.KeyTextField;
+
+  /**
+   * Slice Zone field in *Experience*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/slices
+   */
+  slices: prismic.SliceZone<ExperienceDocumentDataSlicesSlice> /**
+   * Meta Title field in *Experience*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: experience.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Experience*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: experience.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Experience*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Experience document from Prismic
+ *
+ * - **API ID**: `experience`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ExperienceDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<ExperienceDocumentData>,
+    "experience",
+    Lang
+  >;
+
+type HomepageDocumentDataSlicesSlice =
+  | ExperienceHeroSlice
+  | ExperienceIndexSlice
+  | HeroSliceSlice;
 
 /**
  * Content for HomePage documents
@@ -134,7 +421,14 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
-type PageDocumentDataSlicesSlice = never;
+type PageDocumentDataSlicesSlice =
+  | CertifiedEducationSlice
+  | CtaSlice
+  | DetailedExperienceSlice
+  | CareerOverviewSlice
+  | HeroSliceSlice
+  | ExperienceIndexSlice
+  | ExperienceHeroSlice;
 
 /**
  * Content for Page documents
@@ -195,7 +489,540 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-export type AllDocumentTypes = HomepageDocument | PageDocument;
+export type AllDocumentTypes =
+  | ExperienceDocument
+  | HomepageDocument
+  | PageDocument;
+
+/**
+ * Item in *CareerOverview → Default → Primary → Career*
+ */
+export interface CareerOverviewSliceDefaultPrimaryCareerItem {
+  /**
+   * Title field in *CareerOverview → Default → Primary → Career*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career_overview.default.primary.career[].title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Tag field in *CareerOverview → Default → Primary → Career*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career_overview.default.primary.career[].tag
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  tag: prismic.KeyTextField;
+
+  /**
+   * Description field in *CareerOverview → Default → Primary → Career*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career_overview.default.primary.career[].description
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  description: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *CareerOverview → Default → Primary*
+ */
+export interface CareerOverviewSliceDefaultPrimary {
+  /**
+   * Heading field in *CareerOverview → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career_overview.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Tagline field in *CareerOverview → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career_overview.default.primary.tagline
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  tagline: prismic.KeyTextField;
+
+  /**
+   * Career field in *CareerOverview → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career_overview.default.primary.career[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  career: prismic.GroupField<
+    Simplify<CareerOverviewSliceDefaultPrimaryCareerItem>
+  >;
+}
+
+/**
+ * Default variation for CareerOverview Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CareerOverviewSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CareerOverviewSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *CareerOverview*
+ */
+type CareerOverviewSliceVariation = CareerOverviewSliceDefault;
+
+/**
+ * CareerOverview Shared Slice
+ *
+ * - **API ID**: `career_overview`
+ * - **Description**: CareerOverview
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CareerOverviewSlice = prismic.SharedSlice<
+  "career_overview",
+  CareerOverviewSliceVariation
+>;
+
+/**
+ * Item in *CertifiedEducation → Default → Primary → Certifications*
+ */
+export interface CertifiedEducationSliceDefaultPrimaryCertificationsItem {
+  /**
+   * Name field in *CertifiedEducation → Default → Primary → Certifications*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: certified_education.default.primary.certifications[].name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Organization field in *CertifiedEducation → Default → Primary → Certifications*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: certified_education.default.primary.certifications[].organization
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  organization: prismic.KeyTextField;
+
+  /**
+   * Year field in *CertifiedEducation → Default → Primary → Certifications*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: certified_education.default.primary.certifications[].year
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  year: prismic.KeyTextField;
+}
+
+/**
+ * Item in *CertifiedEducation → Default → Primary → Education And Training*
+ */
+export interface CertifiedEducationSliceDefaultPrimaryEducationAndTrainingItem {
+  /**
+   * Name field in *CertifiedEducation → Default → Primary → Education And Training*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: certified_education.default.primary.education_and_training[].name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Location field in *CertifiedEducation → Default → Primary → Education And Training*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: certified_education.default.primary.education_and_training[].location
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  location: prismic.KeyTextField;
+
+  /**
+   * Year field in *CertifiedEducation → Default → Primary → Education And Training*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: certified_education.default.primary.education_and_training[].year
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  year: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *CertifiedEducation → Default → Primary*
+ */
+export interface CertifiedEducationSliceDefaultPrimary {
+  /**
+   * Certifications field in *CertifiedEducation → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: certified_education.default.primary.certifications[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  certifications: prismic.GroupField<
+    Simplify<CertifiedEducationSliceDefaultPrimaryCertificationsItem>
+  >;
+
+  /**
+   * Education And Training field in *CertifiedEducation → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: certified_education.default.primary.education_and_training[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  education_and_training: prismic.GroupField<
+    Simplify<CertifiedEducationSliceDefaultPrimaryEducationAndTrainingItem>
+  >;
+}
+
+/**
+ * Default variation for CertifiedEducation Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CertifiedEducationSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CertifiedEducationSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *CertifiedEducation*
+ */
+type CertifiedEducationSliceVariation = CertifiedEducationSliceDefault;
+
+/**
+ * CertifiedEducation Shared Slice
+ *
+ * - **API ID**: `certified_education`
+ * - **Description**: CertifiedEducation
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CertifiedEducationSlice = prismic.SharedSlice<
+  "certified_education",
+  CertifiedEducationSliceVariation
+>;
+
+/**
+ * Primary content in *Cta → Default → Primary*
+ */
+export interface CtaSliceDefaultPrimary {
+  /**
+   * Heading field in *Cta → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cta.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Tagline field in *Cta → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cta.default.primary.tagline
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  tagline: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Cta Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CtaSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CtaSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Cta*
+ */
+type CtaSliceVariation = CtaSliceDefault;
+
+/**
+ * Cta Shared Slice
+ *
+ * - **API ID**: `cta`
+ * - **Description**: Cta
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CtaSlice = prismic.SharedSlice<"cta", CtaSliceVariation>;
+
+/**
+ * Default variation for DetailedExperience Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type DetailedExperienceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *DetailedExperience*
+ */
+type DetailedExperienceSliceVariation = DetailedExperienceSliceDefault;
+
+/**
+ * DetailedExperience Shared Slice
+ *
+ * - **API ID**: `detailed_experience`
+ * - **Description**: DetailedExperience
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type DetailedExperienceSlice = prismic.SharedSlice<
+  "detailed_experience",
+  DetailedExperienceSliceVariation
+>;
+
+/**
+ * Primary content in *ExperienceHero → Default → Primary*
+ */
+export interface ExperienceHeroSliceDefaultPrimary {
+  /**
+   * Heading First Name field in *ExperienceHero → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience_hero.default.primary.heading_first_name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  heading_first_name: prismic.KeyTextField;
+
+  /**
+   * Heading Last Name field in *ExperienceHero → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience_hero.default.primary.heading_last_name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  heading_last_name: prismic.KeyTextField;
+
+  /**
+   * Tagline field in *ExperienceHero → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience_hero.default.primary.tagline
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  tagline: prismic.KeyTextField;
+
+  /**
+   * Description field in *ExperienceHero → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: experience_hero.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Default variation for ExperienceHero Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ExperienceHeroSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ExperienceHeroSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ExperienceHero*
+ */
+type ExperienceHeroSliceVariation = ExperienceHeroSliceDefault;
+
+/**
+ * ExperienceHero Shared Slice
+ *
+ * - **API ID**: `experience_hero`
+ * - **Description**: ExperienceHero
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ExperienceHeroSlice = prismic.SharedSlice<
+  "experience_hero",
+  ExperienceHeroSliceVariation
+>;
+
+/**
+ * Default variation for ExperienceIndex Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ExperienceIndexSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *ExperienceIndex*
+ */
+type ExperienceIndexSliceVariation = ExperienceIndexSliceDefault;
+
+/**
+ * ExperienceIndex Shared Slice
+ *
+ * - **API ID**: `experience_index`
+ * - **Description**: ExperienceIndex
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ExperienceIndexSlice = prismic.SharedSlice<
+  "experience_index",
+  ExperienceIndexSliceVariation
+>;
+
+/**
+ * Item in *HeroSlice → Default → Primary → Expertise*
+ */
+export interface HeroSliceSliceDefaultPrimaryExpertiseItem {
+  /**
+   * Expertise Name field in *HeroSlice → Default → Primary → Expertise*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_slice.default.primary.expertise[].expertise_name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  expertise_name: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *HeroSlice → Default → Primary*
+ */
+export interface HeroSliceSliceDefaultPrimary {
+  /**
+   * First Name field in *HeroSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_slice.default.primary.first_name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  first_name: prismic.KeyTextField;
+
+  /**
+   * Last Name field in *HeroSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_slice.default.primary.last_name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  last_name: prismic.KeyTextField;
+
+  /**
+   * Person Image field in *HeroSlice → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_slice.default.primary.person_image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  person_image: prismic.ImageField<never>;
+
+  /**
+   * Tagline field in *HeroSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_slice.default.primary.tagline
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  tagline: prismic.KeyTextField;
+
+  /**
+   * Description field in *HeroSlice → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_slice.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Current Position Name field in *HeroSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_slice.default.primary.current_position_name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  current_position_name: prismic.KeyTextField;
+
+  /**
+   * Current Position Place field in *HeroSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_slice.default.primary.current_position_place
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  current_position_place: prismic.KeyTextField;
+
+  /**
+   * Current Position Timeline field in *HeroSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_slice.default.primary.current_position_timeline
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  current_position_timeline: prismic.KeyTextField;
+
+  /**
+   * Expertise field in *HeroSlice → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_slice.default.primary.expertise[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  expertise: prismic.GroupField<
+    Simplify<HeroSliceSliceDefaultPrimaryExpertiseItem>
+  >;
+}
 
 /**
  * Default variation for HeroSlice Slice
@@ -206,7 +1033,7 @@ export type AllDocumentTypes = HomepageDocument | PageDocument;
  */
 export type HeroSliceSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<HeroSliceSliceDefaultPrimary>,
   never
 >;
 
@@ -248,6 +1075,15 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      ExperienceDocument,
+      ExperienceDocumentData,
+      ExperienceDocumentDataExpertiseItem,
+      ExperienceDocumentDataKeyResponsibilitiesItem,
+      ExperienceDocumentDataAchievementsItem,
+      ExperienceDocumentDataSkillsItem,
+      ExperienceDocumentDataTechnologiesItem,
+      ExperienceDocumentDataCaseTypesPracticeAreasItem,
+      ExperienceDocumentDataSlicesSlice,
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
@@ -255,7 +1091,34 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      CareerOverviewSlice,
+      CareerOverviewSliceDefaultPrimaryCareerItem,
+      CareerOverviewSliceDefaultPrimary,
+      CareerOverviewSliceVariation,
+      CareerOverviewSliceDefault,
+      CertifiedEducationSlice,
+      CertifiedEducationSliceDefaultPrimaryCertificationsItem,
+      CertifiedEducationSliceDefaultPrimaryEducationAndTrainingItem,
+      CertifiedEducationSliceDefaultPrimary,
+      CertifiedEducationSliceVariation,
+      CertifiedEducationSliceDefault,
+      CtaSlice,
+      CtaSliceDefaultPrimary,
+      CtaSliceVariation,
+      CtaSliceDefault,
+      DetailedExperienceSlice,
+      DetailedExperienceSliceVariation,
+      DetailedExperienceSliceDefault,
+      ExperienceHeroSlice,
+      ExperienceHeroSliceDefaultPrimary,
+      ExperienceHeroSliceVariation,
+      ExperienceHeroSliceDefault,
+      ExperienceIndexSlice,
+      ExperienceIndexSliceVariation,
+      ExperienceIndexSliceDefault,
       HeroSliceSlice,
+      HeroSliceSliceDefaultPrimaryExpertiseItem,
+      HeroSliceSliceDefaultPrimary,
       HeroSliceSliceVariation,
       HeroSliceSliceDefault,
     };

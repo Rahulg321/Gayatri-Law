@@ -1,0 +1,18 @@
+{
+  "id": "detailed_experience",
+  "type": "SharedSlice",
+  "name": "DetailedExperience",
+  "description": "DetailedExperience",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {}
+    }
+  ]
+}

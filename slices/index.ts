@@ -3,5 +3,11 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  career_overview: dynamic(() => import("./CareerOverview")),
+  certified_education: dynamic(() => import("./CertifiedEducation")),
+  cta: dynamic(() => import("./Cta")),
+  detailed_experience: dynamic(() => import("./DetailedExperience")),
+  experience_hero: dynamic(() => import("./ExperienceHero")),
+  experience_index: dynamic(() => import("./ExperienceIndex")),
   hero_slice: dynamic(() => import("./HeroSlice")),
 };

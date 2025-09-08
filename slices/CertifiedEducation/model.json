@@ -1,0 +1,79 @@
+{
+  "id": "certified_education",
+  "type": "SharedSlice",
+  "name": "CertifiedEducation",
+  "description": "CertifiedEducation",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "certifications": {
+          "type": "Group",
+          "config": {
+            "label": "Certifications",
+            "repeat": true,
+            "fields": {
+              "name": {
+                "type": "Text",
+                "config": {
+                  "label": "Name",
+                  "placeholder": ""
+                }
+              },
+              "organization": {
+                "type": "Text",
+                "config": {
+                  "label": "Organization",
+                  "placeholder": ""
+                }
+              },
+              "year": {
+                "type": "Text",
+                "config": {
+                  "label": "Year",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "education_and_training": {
+          "type": "Group",
+          "config": {
+            "label": "Education And Training",
+            "repeat": true,
+            "fields": {
+              "name": {
+                "type": "Text",
+                "config": {
+                  "label": "Name",
+                  "placeholder": ""
+                }
+              },
+              "location": {
+                "type": "Text",
+                "config": {
+                  "label": "Location",
+                  "placeholder": ""
+                }
+              },
+              "year": {
+                "type": "Text",
+                "config": {
+                  "label": "Year",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

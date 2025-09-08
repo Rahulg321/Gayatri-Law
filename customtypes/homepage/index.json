@@ -11,6 +11,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "experience_hero": {
+              "type": "SharedSlice"
+            },
+            "experience_index": {
+              "type": "SharedSlice"
+            },
             "hero_slice": {
               "type": "SharedSlice"
             }

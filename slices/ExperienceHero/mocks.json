@@ -1,0 +1,35 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading_first_name": {
+				"__TYPE__": "FieldContent",
+				"value": "happen",
+				"type": "Text"
+			},
+			"heading_last_name": {
+				"__TYPE__": "FieldContent",
+				"value": "pound",
+				"type": "Text"
+			},
+			"tagline": {
+				"__TYPE__": "FieldContent",
+				"value": "is",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Culpa do eu laboris ex consectetur deserunt esse consequat fugiat duis nisi."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

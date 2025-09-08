@@ -1,0 +1,182 @@
+{
+  "format": "page",
+  "id": "experience",
+  "label": "Experience",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID"
+        }
+      },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Name",
+          "placeholder": ""
+        }
+      },
+      "year": {
+        "type": "Text",
+        "config": {
+          "label": "Year",
+          "placeholder": ""
+        }
+      },
+      "company": {
+        "type": "Text",
+        "config": {
+          "label": "Company",
+          "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "Description",
+          "placeholder": ""
+        }
+      },
+      "expertise": {
+        "type": "Group",
+        "config": {
+          "label": "Expertise",
+          "repeat": true,
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "Name",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "key_responsibilities": {
+        "type": "Group",
+        "config": {
+          "label": "Key Responsibilities",
+          "repeat": true,
+          "fields": {
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "Title",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "achievements": {
+        "type": "Group",
+        "config": {
+          "label": "Achievements",
+          "repeat": true,
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "Name",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "skills": {
+        "type": "Group",
+        "config": {
+          "label": "Skills",
+          "repeat": true,
+          "fields": {
+            "skill_name": {
+              "type": "Text",
+              "config": {
+                "label": "Skill Name",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "technologies": {
+        "type": "Group",
+        "config": {
+          "label": "Technologies",
+          "repeat": true,
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "Name",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "case_types_practice_areas": {
+        "type": "Group",
+        "config": {
+          "label": "Case Types Practice Areas",
+          "repeat": true,
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "Name",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "location": {
+        "type": "Text",
+        "config": {
+          "label": "Location",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}
